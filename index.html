@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+
+        <div class="scoreboard">
+            <div style="margin-right: 240px; margin-left: 20px; margin-top: 10px;">
+                <div class="left">ROCK</div>
+                <div class="left">PAPER</div>
+                <div class="left">SCISSORS</div>
+            </div>
+            <div style="margin-right: 30px;" class="score">
+                <div class="comp">COMPUTER</div>
+                <div class="comp">SCORE</div>
+                <div id="comp_score" class="zero">0</div>
+            </div>
+            <div class="score">
+                <div class="comp">YOUR</div>
+                <div class="comp">SCORE</div>
+                <div id="your_score" class="zero">0</div>
+            </div>
+        </div>
+
+        <div id="play" style="margin-left: 500px;">
+            <div style="display: flex;">
+                <div style="margin-top: 50px;"><button onclick="rock()" class="circle"><img src="assets/rock.png" height="150px"></button></div>
+                <div style="margin-top: 118px;"><img src="assets/Line1.png"></div>
+                <div style="margin-top: 50px;"><button onclick="scissor()" class="circle"><img src="assets/scissors.png" height="150px"></button></div>
+            
+            </div>
+            
+            <div style="display: flex;">
+                <div style="margin-left: 100px; margin-right: 95px;"><img src="assets/Line3.png"></div>
+                <div><img src="assets/Line2.png"></div>
+            </div>
+
+            <div style="margin-left: 140px;"><button onclick="paper()" class="circle"><img src="assets/paper.png" height="150px"></button></div>
+            
+            <div style="margin-left: 900px;"><button onclick="open_rules()" class="but">RULES</button></div>
+
+           
+        </div>
+
+        <div id="ruler" style="position: fixed; top: 250px; right: 50px;"><img src="assets/rules.png"></div>
+        <div id="cross" style="position: fixed; top: 250px; right:10px;"><button onclick="hide_rules()" style="border: none; background-color: transparent;"><img src="assets/red_circle.png"></button></div>
+
+        
+        <div id="tie" style="margin-top: 100px;">
+            <div style="display: flex;">
+                <div style="margin-right: 300px; margin-left: 500px;" class="pick">YOU PICKED</div>
+                <div class="pick">PC PICKED</div>
+            </div>
+            <br><br>
+            <div style="display: flex;">
+                <div style="margin-left: 450px;"><img id="image_tie" src="assets/rock_ellipse.png"></div>
+                <div>
+                    <div class="tie_text">TIE UP</div>
+                    <br><br><br>
+                    <div style="margin-left: 60px;"><button onclick="play_again()" id="replay_button">REPLAY</button></div>
+                </div>
+                <div><img id="imagetie" src="assets/rock_ellipse.png"></div>
+            </div>
+            <br><br><br><br><br>
+            <div style="margin-left: 1380px;"><button onclick="open_rules()" class="but">RULES</button></div>
+        </div>
+
+        <div id="win" style="margin-top: 100px;">
+            <div style="display: flex;">
+                <div style="margin-right: 300px; margin-left: 500px;" class="pick">YOU PICKED</div>
+                <div class="pick">PC PICKED</div>
+            </div>
+            <br><br>
+            <div style="display: flex;">
+                <div style="margin-left: 450px;"><img id="image_win" src="assets/rock_ellipse.png"></div>
+                <div>
+                    <div class="tie_text">YOU WIN</div>
+                    <div class="tie_text" style="font-size: 30px;">AGAINST PC</div>
+                    <br><br><br>
+                    <div style="margin-left: 60px;"><button onclick="playagain_win()" id="replay_button">PLAY AGAIN</button></div>
+                </div>
+                <div><img id="imagewin" src="assets/rock_ellipse.png"></div>
+            </div>
+            <div style="margin-left: 1300px;"><button onclick="open_rules()" class="but">RULES</button><a href="hurray.html" id="next">NEXT</a>
+        </div>
+
+        <div id="loss" style="margin-top: 100px;">
+            <div style="display: flex;">
+                <div style="margin-right: 300px; margin-left: 500px;" class="pick">YOU PICKED</div>
+                <div class="pick">PC PICKED</div>
+            </div>
+            <br><br>
+            <div style="display: flex;">
+                <div style="margin-left: 450px;"><img id="image_loss" src="assets/rock_ellipse.png"></div>
+                <div>
+                    <div class="tie_text">YOU LOST</div>
+                    <div class="tie_text" style="font-size: 30px;">AGAINST PC</div>
+                    <br><br><br>
+                    <div style="margin-left: 60px;"><button onclick="playagain_loss()" id="replay_button">PLAY AGAIN</button></div>
+                </div>
+                <div><img id="imageloss" src="assets/rock_ellipse.png"></div>
+            </div>
+            <br>
+            <div style="margin-left: 1380px;"><button onclick="open_rules()" class="but">RULES</button></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
